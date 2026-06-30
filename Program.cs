@@ -28,6 +28,17 @@ public class Program
         println(biggerNumber);
     }
 
+    public static void QuestionTwo()
+    {
+        print("Write your age: ");
+        byte age = byte.Parse(Console.ReadLine());
+
+        string biggerAge = (age >= 18) ?
+            $"you're over 18 years" : $"you're under 18 years";
+
+        println(biggerAge);
+    }
+
     // Methods to increase the efficienty and readbillty
     public static Action<string> print => (message) => Console.Write(message);
     public static Action<string> println => (message) => Console.WriteLine(message);
