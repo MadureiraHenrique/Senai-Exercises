@@ -5,13 +5,13 @@
 // 2. Peça a idade do usuário e faça um operação para descobrir se ele é maior de idade ou menor de idade e exiba na tela. 
 // 3. Peça ao usuário 3 notas e faça a média dessas 3 notas e exiba se ele passou (nota maior ou igual a 7), se ele foi pra recuperação (nota entre 5 e 6,9) ou se foi reprovado (abaixo de 4).
 // 4. Peça um número ao usuário e exiba se esse número é par ou ímpar e exiba o resultado.
-// 5. Faça a tabuada (+ ou - ou *) de um número inteiro de 1 a 10.
+// 5. Faça a tabuada (+ ou - ou *) de um número inteiro positivo de 1 a 10.
 
 public class Program
 {
     public static void Main(string[] args)
     {
-        QuestionFour();
+        QuestionFive();
     }
 
     public static void QuestionOne()
@@ -22,7 +22,7 @@ public class Program
         int numberTwo = readInt();
 
         string biggerNumber = (numberOne > numberTwo) ?
-            $"number one ({numberOne}) is bigger than the number two ({numberTwo})" : (numberTwo > numberOne) ? 
+            $"number one ({numberOne}) is bigger than the number two ({numberTwo})" : (numberTwo > numberOne) ?
             $"number two ({numberTwo}) is bigger than the number one ({numberOne})" : $"number two ({numberTwo}) is equals at number one ({numberOne})";
 
         println(biggerNumber);
@@ -55,7 +55,7 @@ public class Program
 
         double average = sum / sizeGrade;
 
-        string calculateAvg = (average >= 7) ? 
+        string calculateAvg = (average >= 7) ?
             "You passed!" : (average >= 5.0 && average <= 6.9) ? "You can do the final exam!" : "You failed!";
 
         println(calculateAvg);
@@ -66,10 +66,23 @@ public class Program
         print("Write a number: ");
         int number = readInt();
 
-        string oddOrEven = (number % 2 == 0) ? 
+        string oddOrEven = (number % 2 == 0) ?
             $"This number ({number}) is even!" : $"This number ({number}) is odd!";
 
         println(oddOrEven);
+    }
+
+    public static void QuestionFive()
+    {
+        print("Write a number: ");
+        int number = readInt();
+        number = Math.Abs(number);
+
+        println("Multiplication table!");
+        for (int count = 1; count <= 10; count++)
+        {
+            println($"{count} * {number} = {number * count}");
+        }
     }
 
     // Methods to increase the efficienty and readbillty
