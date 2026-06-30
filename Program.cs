@@ -11,7 +11,7 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        QuestionOne();
+        QuestionThree();
     }
 
     public static void QuestionOne()
@@ -31,12 +31,33 @@ public class Program
     public static void QuestionTwo()
     {
         print("Write your age: ");
-        byte age = byte.Parse(Console.ReadLine());
+        byte age = readByte();
 
         string biggerAge = (age >= 18) ?
             $"you're over 18 years" : $"you're under 18 years";
 
         println(biggerAge);
+    }
+
+    public static void QuestionThree()
+    {
+        double[] grades = new double[3];
+        int sizeGrade = grades.Length;
+        double sum = 0;
+
+        for (int count = 0; count < grades.Length; count++)
+        {
+            print($"Write your {count + 1}º grade: ");
+            grades[count] = readDouble();
+
+            sum += grades[count];
+        }
+
+        double average = sum / sizeGrade;
+
+        string calculateAvg = (average >= 7) ? "You passed!" : (average >= 5.0 && average <= 6.9) ? "You can do the final exam!" : "You failed!";
+
+        println(calculateAvg);
     }
 
     // Methods to increase the efficienty and readbillty
