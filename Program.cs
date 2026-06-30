@@ -11,7 +11,7 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        QuestionThree();
+        QuestionFour();
     }
 
     public static void QuestionOne()
@@ -55,9 +55,21 @@ public class Program
 
         double average = sum / sizeGrade;
 
-        string calculateAvg = (average >= 7) ? "You passed!" : (average >= 5.0 && average <= 6.9) ? "You can do the final exam!" : "You failed!";
+        string calculateAvg = (average >= 7) ? 
+            "You passed!" : (average >= 5.0 && average <= 6.9) ? "You can do the final exam!" : "You failed!";
 
         println(calculateAvg);
+    }
+
+    public static void QuestionFour()
+    {
+        print("Write a number: ");
+        int number = readInt();
+
+        string oddOrEven = (number % 2 == 0) ? 
+            $"This number ({number}) is even!" : $"This number ({number}) is odd!";
+
+        println(oddOrEven);
     }
 
     // Methods to increase the efficienty and readbillty
