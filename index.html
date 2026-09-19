@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorador de Agentes do Vava</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Explorador de Agentes do Vava 🤪</h1>
+  </header>
+
+  <main class="container">
+
+    <section class="search-section">
+      <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="Pesquisar agente por nome, função ou descrição..."
+      >
+      <button id="searchBtn" class="search-btn">Pesquisar</button>
+    </section>
+
+    <p id="statusMsg" class="status-msg"></p>
+
+    <section id="cardsContainer" class="cards-container">
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Dados vindos de <a href="https://valorant-api.com/" target="_blank" rel="noopener">valorant-api.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
